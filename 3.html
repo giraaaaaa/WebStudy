@@ -11,16 +11,26 @@
         <h1><a href="index.html">WEB</a></h1>
         <input id="night_day" type="button" value="light" onclick="
         var target = document.querySelector('body');
+        var alist = document.querySelectorAll('a');
 
         if(this.value === 'light')
         {
             target.style.backgroundColor='black';
             target.style.color='white';
+            for(var i=0;i<alist.length;i++)
+            {
+            console.log(alist[i]);
+            alist[i].style.color='powderblue';
+            }
             this.value = 'unlight';
         }
             else{
             target.style.backgroundColor='white';
             target.style.color='black';
+            for(var i=0;i<alist.length;i++){
+            console.log(alist[i]);
+            alist[i].style.color='blue';}
+
             this.value = 'light';
             }           
         ">
